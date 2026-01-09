@@ -46,7 +46,7 @@ public class SolveSudoku {
         return true;
     }
 
-    private static void shuffleNumbersInBoard(int[] array) {
+    private void shuffleNumbersInBoard(int[] array) {
 
         Random random = new Random();
 
