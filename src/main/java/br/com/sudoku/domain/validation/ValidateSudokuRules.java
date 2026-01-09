@@ -2,7 +2,7 @@ package br.com.sudoku.domain.validation;
 
 public class ValidateSudokuRules {
 
-    public boolean isTheNumberInRow(int[][] board, int number, int row) {
+    private boolean isTheNumberInRow(int[][] board, int number, int row) {
 
         for (int columnPos = 0; columnPos < board.length; columnPos++) {
             if (board[row][columnPos] == number) {
@@ -13,7 +13,7 @@ public class ValidateSudokuRules {
         return true;
     }
 
-    public boolean isTheNumberInColumn(int[][] board, int number, int column) {
+    private boolean isTheNumberInColumn(int[][] board, int number, int column) {
 
         for (int rowPos = 0; rowPos < board.length; rowPos++) {
             if (board[rowPos][column] == number) {
@@ -24,7 +24,7 @@ public class ValidateSudokuRules {
         return true;
     }
 
-    public boolean isTheNumberInA3x3Block(int[][] board, int number, int row, int column) {
+    private boolean isTheNumberInA3x3Block(int[][] board, int number, int row, int column) {
 
         int currentRow = row - row % 3;
         int currentColumn = column - column % 3;
