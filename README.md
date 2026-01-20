@@ -22,31 +22,31 @@ O projeto segue as convenções de pacotes Java e está organizado da seguinte f
 
 **Classe ValidateSudokuRules:**
 
-* **private boolean isTheNumberInRow(int[][] board, int number, int row):** verifica se o número já existe na linha;
-* **private boolean isTheNumberInColumn(int[][] board, int number, int column):** verifica se o número já existe na coluna;
-* **private boolean isTheNumberInA3x3Block(int[][] board, int number, int row, int column):** verifica se o número já existe no quadrante 3x3;
-* **public boolean isAValidPlaceForTheNumber(int[][] board, int row, int column, int number):** consolida as validações acima.
+* ```private boolean isTheNumberInRow(int[][] board, int number, int row):```verifica se o número já existe na linha;
+* ```private boolean isTheNumberInColumn(int[][] board, int number, int column):``` verifica se o número já existe na coluna;
+* ```private boolean isTheNumberInA3x3Block(int[][] board, int number, int row, int column):``` verifica se o número já existe no quadrante 3x3;
+* ```public boolean isAValidPlaceForTheNumber(int[][] board, int row, int column, int number):``` consolida as validações acima.
 
 **Classe SolveSudoku:**
 
-* **public boolean solveSudoku(Sudoku sudoku):** método principal de resolução;
-* **shuffleNumbersInBoard(int[] array):** implementação para aleatoriedade no preenchimento;
-* **printSolvedSudokuBoard(int[][] board):** exibição formatada do resultado no console.
+* ```public boolean solveSudoku(Sudoku sudoku):``` método principal de resolução;
+* ```shuffleNumbersInBoard(int[] array):``` implementação para aleatoriedade no preenchimento;
+* ```printSolvedSudokuBoard(int[][] board):```exibição formatada do resultado no console.
 
 **Classe SolveSudokuTest:**
 
-* **void solve_OnceValidatedRowsAndColumnsAnd3X3Block_SolveSudoku():** garante que o "solver" respeita todas as regras do jogo a partir de um tabuleiro de entrada.
+* ```void solve_OnceValidatedRowsAndColumnsAnd3X3Block_SolveSudoku():``` garante que o "solver" respeita todas as regras do jogo a partir de um tabuleiro de entrada.
 
 ### Pacotes das Classes Principais (src/main/java):
 
-* br.com.sudoku.app.SudokuMain;
-* br.com.sudoku.domain.model.Sudoku;
-* br.com.sudoku.domain.validation.ValidateSudokuRules;
-* br.com.sudoku.solver.SolveSudoku.
+* ```br.com.sudoku.app.SudokuMain```;
+* ```br.com.sudoku.domain.model.Sudoku```;
+* ```br.com.sudoku.domain.validation.ValidateSudokuRules```;
+* ```br.com.sudoku.solver.SolveSudoku```.
 
 ### Pacotes de Testes Unitários (src/test/java):
 
-* br.com.sudoku.SolveSudokuTest.
+* ```br.com.sudoku.SolveSudokuTest```.
 
 ## 🛠️ Tecnologias Utilizadas:
 
@@ -61,10 +61,10 @@ Comandos a seguir podem ser executados via Bash (terminal):
 
 | Descrição | Comando 
 | :---:      | :---: | 
-| Clona o repositório|*git clone* [https://github.com/mathmcf/sudoku-engine.git](https://github.com/mathmcf/sudoku-engine.git); |
-| Compila o projeto | *mvn clean install* |
-| Executa os testes | *mvn test* |
-| Roda a aplicação | *mvn exec:java -Dexec.mainClass="br.com.sudoku.app.SudokuMain"* |
+| Clona o repositório|```git clone https://github.com/mathmcf/sudoku-engine.git```|
+| Compila o projeto | ```mvn clean install```|
+| Executa os testes | ```mvn test```|
+| Roda a aplicação | ```mvn exec:java -Dexec.mainClass="br.com.sudoku.app.SudokuMain"```|
 
 ## 📄 Configuração do Maven (pom.xml)
 
